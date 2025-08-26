@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Virtual environment
+venv/
+.env/
+.env.*
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Configuration sensitive
+config/confluent_config.json
+config/neon_config.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python cache
+*.cache

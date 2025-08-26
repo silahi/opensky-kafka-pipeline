@@ -1,0 +1,5 @@
+confluent-kafka[avro]==2.5.0
+requests==2.31.0
+schedule==1.2.0
+#streamlit==1.36.0   # si tu veux l’interface locale
+#psycopg2-binary==2.9.9   # si tu veux tester Postgres direct
