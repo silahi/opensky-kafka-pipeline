@@ -10,7 +10,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger("producer")
 
-def load_config(path="../config/confluent_config.json"):
+def load_config(path="config/confluent_config.json"):
     """Charge la configuration Confluent Cloud depuis un fichier JSON."""
     with open(path, "r") as f:
         return json.load(f)

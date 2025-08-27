@@ -3,10 +3,10 @@ import logging
 
 API_URL = "https://opensky-network.org/api/states/all"
 PARAMS = {
-    "lamin": 20,
-    "lomin": -22.0,
-    "lamax": 58,
-    "lomax": 51
+    "lamin": 16.0,
+    "lomin": -34.0,
+    "lamax": 47.0,
+    "lomax": 46.0
 }
 
 logger = logging.getLogger(__name__)

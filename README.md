@@ -1,10 +1,10 @@
-# ✈️ OpenSky → Kafka → Postgres Pipeline
+# ✈️ OpenSky → Kafka → Postgres  → Tableau Pipeline
 
 ## 📌 Description
 Ce projet collecte en temps réel des données de vol depuis l’API **OpenSky Network**, 
 les publie dans **Apache Kafka** (Confluent Cloud), puis les synchronise dans une base **Postgres** (hébergée sur Neon).
 
-L’objectif est de construire une pipeline **data engineering** moderne, inspirée de cas réels (monitoring aéronautique de l’ASECNA).
+L’objectif est de construire une pipeline **data engineering** moderne, inspirée de cas réels.
 ---
 
 ## Apercu du Résultat
@@ -12,13 +12,13 @@ L’objectif est de construire une pipeline **data engineering** moderne, inspir
 
 ## 🏗️ Architecture
 
-# Flux de données OpenSky → Kafka → Postgres
-
+# Flux de données OpenSky → Kafka → Postgres → Tableau
+![alt](✈️%20SkyStream%20Analytics%20Pipeline.png)
 
 - **Producer Python** : récupère les données OpenSky et les envoie vers Kafka.  
 - **Kafka Confluent Cloud** : ingère les messages Avro (key + value) et versionne les schémas via Schema Registry.  
 - **Postgres (Neon)** : stockage persistant via Kafka Connect Sink.  
-- **Visualisation** (optionnelle) : Kibana, Superset ou Grafana pour explorer les données.
+- **Visualisation** : Tableau pour visualiser les données.
 
 ---
 
@@ -146,7 +146,7 @@ jobs:
 - SCHEMA_REGISTRY_AUTH
 - TOPIC
 
-## 📊 Cas d’usage ASECNA
+## 📊 Cas d’usage
 
 - Détection des vols entrants dans une région donnée.
 - Alerte sur trajectoires anormales ou perte de signal.

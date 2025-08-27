@@ -78,7 +78,7 @@ def produce_message(state):
 # Main loop
 # ----------------------------
 def main():
-    logger.info("🚀 Starting OpenSky → Kafka Producer (every 5 min)")
+    logger.info("🚀 Starting OpenSky → Kafka Producer (every 15 secondes)")
     try:
         while True:
             states = fetch_opensky_data()
@@ -91,8 +91,8 @@ def main():
                 logger.info(f"✅ Sent {success_count} messages to '{TOPIC}'")
             else:
                 logger.warning("⚠️ No data fetched from OpenSky API")
-            logger.info("⏳ Sleeping 5 minutes...")
-            time.sleep(300)
+            logger.info("⏳ Sleeping 15 secondes...")
+            time.sleep(15)
     except KeyboardInterrupt:
         logger.info("🛑 Stopping producer...")
         producer.flush()
