@@ -5,8 +5,10 @@ Ce projet collecte en temps réel des données de vol depuis l’API **OpenSky N
 les publie dans **Apache Kafka** (Confluent Cloud), puis les synchronise dans une base **Postgres** (hébergée sur Neon).
 
 L’objectif est de construire une pipeline **data engineering** moderne, inspirée de cas réels (monitoring aéronautique de l’ASECNA).
-
 ---
+
+## Apercu du Résultat
+![alt](Vue_globale_du_trafic.png)
 
 ## 🏗️ Architecture
 
